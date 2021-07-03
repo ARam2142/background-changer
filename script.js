@@ -6,13 +6,18 @@ const red = document.getElementsByClassName(".red"),
   yellow = document.getElementsByClassName(".yellow");
 
 button.addEventListener("click", (e) => {
-  //   if (body) {
-  //     body.classList.toggle("red");
-  //   } else {
-  //     body.classList.toggle("white");
-  //   }
-
-  let colorArray = [];
-  let choice = colorArray[Math.floor(Math.random() * colorArray.length)];
+  const colorArray = [
+    "red",
+    "blue",
+    "purple",
+    "green",
+    "yellow",
+    "black",
+    "orange",
+    "grey",
+    "pink",
+  ];
+  let choices = parseInt(Math.random() * colorArray.length);
   console.log(choice);
+  body.style.backgroundColor = colorArray[choices];
 });
